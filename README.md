@@ -1,4 +1,4 @@
-# Grafana AWS SDK
+# Plutono AWS SDK
 
 This is a common package that can be used for all amazon plugins.
 

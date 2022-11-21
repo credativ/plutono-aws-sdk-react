@@ -1,4 +1,4 @@
-import { SelectableValue } from '@grafana/data';
+import { SelectableValue } from '@credativ/plutono-data';
 import { AwsAuthType } from './types';
 
 export const awsAuthProviderOptions = [

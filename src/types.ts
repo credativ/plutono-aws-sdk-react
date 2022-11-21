@@ -1,4 +1,4 @@
-import { DataSourceJsonData } from '@grafana/data';
+import { DataSourceJsonData } from '@credativ/plutono-data';
 
 export enum AwsAuthType {
   Keys = 'keys',

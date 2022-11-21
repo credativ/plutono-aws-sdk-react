@@ -120,7 +120,7 @@ func (sc *SessionCache) GetSession(region string, s AWSDatasourceSettings) (*ses
 	}
 
 	if s.AssumeRoleARN != "" && !sc.authSettings.AssumeRoleEnabled {
-		return nil, fmt.Errorf("attempting to use assume role (ARN) which is disabled in grafana.ini")
+		return nil, fmt.Errorf("attempting to use assume role (ARN) which is disabled in plutono.ini")
 	}
 
 	bldr := strings.Builder{}

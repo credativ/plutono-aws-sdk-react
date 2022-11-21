@@ -26,7 +26,7 @@ const buildCjsPackage = ({ env }) => {
         },
       },
     ],
-    external: ['react', '@grafana/data', '@grafana/ui'],
+    external: ['react', '@credativ/plutono-data', '@credativ/plutono-ui'],
     plugins: [
       typescript({
         rollupCommonJSResolveHack: false,

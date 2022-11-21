@@ -1,7 +1,7 @@
 {
-  "name": "@grafana/aws-sdk",
-  "version": "0.0.3",
-  "description": "Common AWS features for grafana",
+  "name": "@credativ/plutono-aws-sdk",
+  "version": "0.0.4-alpha.1",
+  "description": "Common AWS features for plutono",
   "main": "dist/index.js",
   "scripts": {
     "dev": "watch 'npm run bundle' ./src",
@@ -9,24 +9,24 @@
     "bundle": "rollup -c rollup.config.ts",
     "clean": "rimraf ./dist ./compiled",
     "typecheck": "tsc --noEmit",
-    "publish": "npm publish  --access=public --scope=grafana",
+    "publish": "npm publish  --access=public --scope=credativ",
     "test": "jest --notify --watch"
   },
   "files": [
     "index.js",
     "dist"
   ],
-  "repository": "github:grafana/grafana-aws-sdk",
-  "author": "Grafana Labs <team@grafana.com> (https://grafanap.com)",
+  "repository": "github:credativ/plutono-aws-sdk-react",
+  "author": "Grafana Labs <team@grafana.com> (https://plutonop.com)",
   "license": "Apache-2.0",
   "dependencies": {},
   "devDependencies": {
-    "@grafana/data": "^7.5.0",
-    "@grafana/ui": "^7.5.0",
+    "@credativ/plutono-data": "^7.5.18-alpha.0",
+    "@credativ/plutono-ui": "^7.5.18-alpha.0",
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
-    "@grafana/toolkit": "^7.5.1",
+    "@credativ/plutono-toolkit": "^7.5.18-alpha.0",
     "@grafana/tsconfig": "^1.0.0-rc1",
     "@rollup/plugin-commonjs": "11.0.2",
     "@rollup/plugin-json": "4.0.3",

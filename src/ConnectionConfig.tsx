@@ -1,12 +1,12 @@
 import React, { FC, useEffect, useState } from 'react';
-import { Input, Select, InlineField, ButtonGroup, ToolbarButton, FieldSet } from '@grafana/ui';
+import { Input, Select, InlineField, ButtonGroup, ToolbarButton, FieldSet } from '@credativ/plutono-ui';
 import {
   DataSourcePluginOptionsEditorProps,
   onUpdateDatasourceJsonDataOptionSelect,
   onUpdateDatasourceResetOption,
   onUpdateDatasourceJsonDataOption,
   onUpdateDatasourceSecureJsonDataOption,
-} from '@grafana/data';
+} from '@credativ/plutono-data';
 
 import { standardRegions } from './regions';
 import { AwsAuthDataSourceJsonData, AwsAuthDataSourceSecureJsonData, AwsAuthType } from './types';
@@ -33,7 +33,7 @@ export const ConnectionConfig: FC<ConnectionConfigProps> = (props: ConnectionCon
     profile = options.database;
   }
 
-  const settings = (window as any).grafanaBootData.settings;
+  const settings = (window as any).plutonoBootData.settings;
   const awsAllowedAuthProviders = settings.awsAllowedAuthProviders ?? [
     AwsAuthType.Default,
     AwsAuthType.Keys,
@@ -87,7 +87,9 @@ export const ConnectionConfig: FC<ConnectionConfigProps> = (props: ConnectionCon
           labelWidth={28}
           tooltip="Credentials profile name, as specified in ~/.aws/credentials, leave blank for default."
         >
-          <Input
+          <
+           // @ts-ignore
+           Input
             className="width-30"
             placeholder="default"
             value={profile}
@@ -101,7 +103,9 @@ export const ConnectionConfig: FC<ConnectionConfigProps> = (props: ConnectionCon
           <InlineField label="Access Key ID" labelWidth={28}>
             {props.options.secureJsonFields?.accessKey ? (
               <ButtonGroup className="width-30">
-                <Input disabled placeholder="Configured" />
+                <
+                 // @ts-ignore
+                 Input disabled placeholder="Configured" />
                 <ToolbarButton
                   icon="edit"
                   tooltip="Edit Access Key ID"
@@ -110,7 +114,9 @@ export const ConnectionConfig: FC<ConnectionConfigProps> = (props: ConnectionCon
                 />
               </ButtonGroup>
             ) : (
-              <Input
+              <
+               // @ts-ignore
+               Input
                 className="width-30"
                 value={options.secureJsonData?.accessKey ?? ''}
                 onChange={onUpdateDatasourceSecureJsonDataOption(props, 'accessKey')}
@@ -121,7 +127,9 @@ export const ConnectionConfig: FC<ConnectionConfigProps> = (props: ConnectionCon
           <InlineField label="Secret Access Key" labelWidth={28}>
             {props.options.secureJsonFields?.secretKey ? (
               <ButtonGroup className="width-30">
-                <Input disabled placeholder="Configured" />
+                <
+                 // @ts-ignore
+                 Input disabled placeholder="Configured" />
                 <ToolbarButton
                   icon="edit"
                   type="button"
@@ -130,7 +138,9 @@ export const ConnectionConfig: FC<ConnectionConfigProps> = (props: ConnectionCon
                 />
               </ButtonGroup>
             ) : (
-              <Input
+              <
+               // @ts-ignore
+               Input
                 className="width-30"
                 value={options.secureJsonData?.secretKey ?? ''}
                 onChange={onUpdateDatasourceSecureJsonDataOption(props, 'secretKey')}
@@ -147,7 +157,9 @@ export const ConnectionConfig: FC<ConnectionConfigProps> = (props: ConnectionCon
             labelWidth={28}
             tooltip="Optionally, specify the ARN of a role to assume. Specifying a role here will ensure that the selected authentication provider is used to assume the specified role rather than using the credentials directly. Leave blank if you don't need to assume a role at all"
           >
-            <Input
+            <
+             // @ts-ignore
+             Input
               className="width-30"
               placeholder="arn:aws:iam:*"
               value={options.jsonData.assumeRoleArn || ''}
@@ -159,7 +171,9 @@ export const ConnectionConfig: FC<ConnectionConfigProps> = (props: ConnectionCon
             labelWidth={28}
             tooltip="If you are assuming a role in another account, that has been created with an external ID, specify the external ID here."
           >
-            <Input
+            <
+             // @ts-ignore
+             Input
               className="width-30"
               placeholder="External ID"
               value={options.jsonData.externalId || ''}
@@ -170,7 +184,9 @@ export const ConnectionConfig: FC<ConnectionConfigProps> = (props: ConnectionCon
       )}
       {!skipEndpoint && (
         <InlineField label="Endpoint" labelWidth={28} tooltip="Optionally, specify a custom endpoint for the service">
-          <Input
+          <
+           // @ts-ignore
+           Input
             className="width-30"
             placeholder={props.defaultEndpoint ?? 'https://{service}.{region}.amazonaws.com'}
             value={options.jsonData.endpoint || ''}

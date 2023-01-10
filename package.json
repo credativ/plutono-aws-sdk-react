@@ -1,6 +1,6 @@
 {
   "name": "@credativ/plutono-aws-sdk",
-  "version": "0.0.4-alpha.1",
+  "version": "0.0.4",
   "description": "Common AWS features for plutono",
   "main": "dist/index.js",
   "scripts": {
